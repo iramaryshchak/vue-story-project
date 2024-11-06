@@ -1,8 +1,11 @@
 <script setup>
+
 import P_Logo from "../assets/svg/Logo.svg";
+
 import { ShoppingCartIcon, MagnifyingGlassIcon } from "@heroicons/vue/24/solid";
 import { ref, computed } from "vue";
 import { useProductStore } from "../stores/productStore";
+
 const search = ref("");
 const productStore = useProductStore();
 const searchProducts = computed(() => {
@@ -12,7 +15,12 @@ const searchProducts = computed(() => {
     return item.title.toLowerCase().includes(search.value.toLowerCase());
   });
 });
+
+const handleSubmit = () => {
+  // Functionality for handling search submission can go here
+};
 </script>
+
 <template>
   <div>
     <header>
@@ -75,6 +83,9 @@ const searchProducts = computed(() => {
               }}</span>
             </div>
             <ShoppingCartIcon class="w-6 h-6 md:w-8 md:h-8" />
+
+
+   
           </router-link>
         </div>
       </nav>
