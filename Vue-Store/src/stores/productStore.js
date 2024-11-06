@@ -24,6 +24,7 @@ export const useProductStore = defineStore({
     }
   },
 
+
   actions: {
     async fetchProducts() {
       this.loading = true;
