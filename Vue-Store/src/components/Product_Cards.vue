@@ -1,7 +1,7 @@
 <script setup>
 import { useProductStore } from "../stores/productStore";
-import { ref, watchEffect } from "vue";
 import Loader from "./Loader.vue";
+import { ref, watchEffect } from "vue";
 import { useToast } from "vue-toastification";
 const toast = useToast();
 const productStore = useProductStore();
